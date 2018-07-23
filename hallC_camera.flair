@@ -1,0 +1,277 @@
+#!/usr/local/flair/flair
+# FLUKA Project file
+Version: 2
+Title: Hall C activation
+Input: hallC_camera.inp
+Submit: *Default
+Tabs: 0.1 0.32 0.56 0.81 1.0
+Page: Flair
+DefMain: True
+LinkPrg: lfluka
+F77bound: True
+F77dline: False
+
+# Run information
+Run: <default>
+	Prev:     0
+	Last:     5
+	Status:   0
+	Pid:      0
+	StartRun: 0
+End
+
+# Material
+Material: D-LIQUID
+	alpha: 0
+	color: #80B0D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS347
+	alpha: 0
+	color: #409030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: AL6061T6
+	alpha: 0
+	color: #105030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: S1006
+	alpha: 0
+	color: #A03010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: H-LIQUID
+	alpha: 0
+	color: #A070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: S1010
+	alpha: 0
+	color: #D03090
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: NIOBIUM
+	alpha: 0
+	color: #7030D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: POTASSIU
+	alpha: 0
+	color: #70B0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: HLOWDENS
+	alpha: 0
+	color: #70D0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: LQHELIUM
+	alpha: 0
+	color: #A05070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS304
+	alpha: 0
+	color: #107050
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: ZINC
+	alpha: 0
+	color: #1070B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: Stainles
+	alpha: 0
+	color: #40D0D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS316LN
+	alpha: 0
+	color: #401010
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS_EF_5
+	alpha: 0
+	color: #80D030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: SS_EF_3
+	alpha: 0
+	color: #405070
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: MANGANES
+	alpha: 0
+	color: #B050D0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Geometry Information
+Geometry:
+	Frame.bsplit: 0.5
+	Frame.tsplit: 0.5
+	Frame.vsplit: 0.5
+
+	# Layer
+	Layer: 3D
+		3D: True
+		3D._visible: True
+		3D.edgedetect: True
+		3D.shadows: False
+		Options.shortcut: F4
+		Options.viewport: False
+		Show: 0
+		Show.lattice: True
+		Show.voxel: True
+		deflights: 1
+		layer: 3D
+	End
+End
+
+# Geometry plot "GeoViewer Red plot"
+Plot: Red
+	Format: .eps
+	Type:   Geometry
+	basisu: -0.975054 0 0.221966
+	basisv: 0.0149184 0.997739 0.0655337
+	boundaries: 1
+	coord: U-V
+	extends: 619.174 274.29
+	labels: 1
+	layer: 3D
+	origin: -549.847 -19.4361 82.5348
+	subtype: Material
+	title: GeoViewer Red plot
+End
+
+# Geometry plot "GeoViewer Green plot"
+Plot: Green
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 1
+	basisv: 1 0 0
+	boundaries: 1
+	coord: Z-X
+	extends: 144 67.1749
+	labels: 1
+	layer: Media
+	origin: -156.659 -230 2955.69
+	subtype: Material
+	title: GeoViewer Green plot
+End
+
+# Geometry plot "GeoViewer Blue plot"
+Plot: Blue
+	Format: .eps
+	Type:   Geometry
+	basisu: 0 0 -1
+	basisv: 0 1 0
+	boundaries: 1
+	coord: Z-Y
+	extends: 57.8704 26.9961
+	labels: 1
+	layer: Media
+	origin: -154.75 -227.801 2964.42
+	subtype: Material
+	title: GeoViewer Blue plot
+End
+
+# Geometry plot "GeoViewer Magenta plot"
+Plot: Magenta
+	Format: .eps
+	Type:   Geometry
+	basisu: -1 0 0
+	basisv: 0 1 0
+	boundaries: 1
+	coord: X-Y
+	extends: 248.832 110.231
+	labels: 1
+	layer: Media
+	origin: -188.027 -233.837 2953.95
+	subtype: Material
+	title: GeoViewer Magenta plot
+End
