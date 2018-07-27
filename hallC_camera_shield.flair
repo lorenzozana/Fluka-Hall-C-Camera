@@ -15,13 +15,13 @@ F77dline: False
 Run: <default>
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
 	StartRun: 0
-	Family:  hallC_camera_aa hallC_camera_ab hallC_camera_ac hallC_camera_ad hallC_camera_ae hallC_camera_af hallC_camera_ag hallC_camera_ah hallC_camera_ai hallC_camera_aj
+	Family:  hallC_camera_shield_aa hallC_camera_shield_ab hallC_camera_shield_ac hallC_camera_shield_ad hallC_camera_shield_ae hallC_camera_shield_af hallC_camera_shield_ag hallC_camera_shield_ah hallC_camera_shield_ai hallC_camera_shield_aj
 
-	# USRxxx data file: hallC_camera_27.bnn
-	Data: hallC_camera_27.bnn
+	# USRxxx data file: hallC_camera_shield_27.bnn
+	Data: \I_\U.\e
 		Unit: 27
 		Type: b
 		Rule: +,\I\d\d\d_fort\.\U
@@ -46,353 +46,113 @@ Run: <default>
 End
 
 # Run information
-Run: hallC_camera_aa
+Run: hallC_camera_shield_aa
 	Rnd:      1
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_aa_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_aa_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_aa_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_ab
+Run: hallC_camera_shield_ab
 	Rnd:      2
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_ab_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ab_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ab_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_ac
+Run: hallC_camera_shield_ac
 	Rnd:      3
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_ac_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ac_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ac_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_ad
+Run: hallC_camera_shield_ad
 	Rnd:      4
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_ad_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ad_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ad_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_ae
+Run: hallC_camera_shield_ae
 	Rnd:      5
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_ae_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ae_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ae_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_af
+Run: hallC_camera_shield_af
 	Rnd:      6
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_af_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_af_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_af_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_ag
+Run: hallC_camera_shield_ag
 	Rnd:      7
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_ag_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ag_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ag_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_ah
+Run: hallC_camera_shield_ah
 	Rnd:      8
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_ah_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ah_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ah_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_ai
+Run: hallC_camera_shield_ai
 	Rnd:      9
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_ai_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ai_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_ai_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Run information
-Run: hallC_camera_aj
+Run: hallC_camera_shield_aj
 	Rnd:      10
 	Prev:     0
 	Last:     5
-	Status:   3
+	Status:   4
 	Pid:      0
-	StartRun: 1532706438
+	StartRun: 1532725450
 	Parent:    <default>
-
-	# USRxxx data file: hallC_camera_aj_27.bnn
-	Data: \I_\U.\e
-		Unit: 27
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_aj_28.bnn
-	Data: \I_\U.\e
-		Unit: 28
-		Type: b
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
-
-	# USRxxx data file: hallC_camera_aj_29.bnx
-	Data: \I_\U.\e
-		Unit: 29
-		Type: x
-		Rule: +,\I\d\d\d_fort\.\U
-		Rule: +,\I\d\d\d_ftn\.\U
-	End
 End
 
 # Material
@@ -419,6 +179,16 @@ End
 Material: AL6061T6
 	alpha: 0
 	color: #105030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: HLOWDENS
+	alpha: 0
+	color: #70D0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -486,16 +256,6 @@ Material: POTASSIU
 End
 
 # Material
-Material: HLOWDENS
-	alpha: 0
-	color: #70D0B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
 Material: LQHELIUM
 	alpha: 0
 	color: #A05070
@@ -526,9 +286,9 @@ Material: ZINC
 End
 
 # Material
-Material: Stainles
+Material: SS316LN
 	alpha: 0
-	color: #40D0D0
+	color: #401010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -536,9 +296,9 @@ Material: Stainles
 End
 
 # Material
-Material: SS316LN
+Material: Stainles
 	alpha: 0
-	color: #401010
+	color: #40D0D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0

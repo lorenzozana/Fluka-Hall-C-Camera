@@ -6,7 +6,7 @@ DEFAULTS                                                              PRECISIO
 BEAM           -10.6             .142857      0.01      0.01          ELECTRON
 * Define the beam position
 BEAMPOS          0.0       0.0    -1400.
-START       1000000.
+START      10000000.
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT          ELECTNUC
 GEOBEGIN                                                 0.0          COMBNAME
@@ -467,18 +467,18 @@ PLA CSSO1i3    -5.3449999999999989 0.0 0.65624626728533997 27.456481442492922
 SPH Void       0.0 0.0 0.0 7000.
 * Vacuum Dumpline to remove air
 RCC DumpVac    0.0 0.0 2680. 0.0 0.0 820. 40.640000000000001
-RPP Cam_out    -190.3 -109. -297. -203.1 2888.0 3020.
-RPP Cam_in     -170. -129.3 -294.6 -215.8 2928.5 3009.9
-RPP Cam_s1     -170. -109. -218.3 -215.8 2908.2 3020.
-RPP Cam_s2     -170. -154.75 -218.3 -215.8 2947.95 2959.95
-RPP Cam_s3     -170. -154.75 -218.3 -215.8 2978.45 2990.45
-RPP Cam_s5     -170. -160.75 -218.3 -215.8 2979.45 2989.45
-RPP Cam_s4     -170. -160.75 -218.3 -215.8 2948.95 2958.95
+RPP Cam_out    -190.3 -109. -297. -215.7 2908.2 3020.
+RPP Cam_in     -170. -129.3 -294.6 -228.4 2928.5 3009.9
+RPP Cam_s1     -170. -109. -228.4 -225.9 2908.2 3020.
+RPP Cam_s2     -170. -154.75 -228.4 -225.9 2947.95 2959.95
+RPP Cam_s3     -170. -154.75 -228.4 -225.9 2978.45 2990.45
+RPP Cam_s5     -170. -160.75 -228.4 -225.9 2979.45 2989.45
+RPP Cam_s4     -170. -160.75 -228.4 -225.9 2948.95 2958.95
 RPP Cam_p1     -170. -139.5 -294.6 -228.4 2938.7 2999.7
 RPP Cam_a1     -170. -129.3 -297. -294.6 2928.5 3009.9
 RPP Cam_a2     -168.8 -140.7 -294.6 -229.6 2939.9 2998.5
 RPP Cam_p2     -168.7 -163.8 -294.6 -229.7 2939.9 2998.5
-RPP Cam_p3     -163.8 -140.7 -294.6 -229.7 2940.0 2945.0
+RPP Cam_p3     -163.8 -140.7 -294.6 -229.7 2940. 2945.
 RCC Cam_a3i    -154.75 -229.6 2953.95 0.0 200. 0.0 4.8
 RCC Cam_a3o    -154.75 -229.6 2953.95 0.0 200. 0.0 6.
 RCC Cam_a4i    -154.75 -229.6 2984.45 0.0 200. 0.0 4.8
@@ -792,14 +792,12 @@ NITROGEN    25 +CSSO2i3 +CSSO3i1 +CSSO6i1 -CSSO4i1 -CSSO5i1 -CCpl2i2 -CSSCuOCi -
                | +CSSO3i1 +CSSO6i1 +CSSO1i2 -YSpl3 -CSSO1i1 -CSSO5i1
                | +YSpl4 +CSSO6i1 +CSSO1i2 -CSSO1i1 -CSSO4i1 -CSSO5i1
                | +YSpl3 +YSpl9 +CSSO1i2 -YSpl4 -YSpl5 -YSpl8
-CAMAIR       5 +Cam_a2 -Cam_p2 -Cam_p3 -Cam_l -Cam_r
+CAMAIR       5 +Cam_a2 -Cam_l -Cam_r
 CAMBOX       5 +Cam_out -Cam_in -Cam_s1 -Cam_a1 -Cam_a3o -Cam_a4o
                | +Cam_s4
                | +Cam_s5
 CAM_ST       5 +Cam_s1 -Cam_a3o -Cam_a4o -Cam_s2 -Cam_s3
 CAM_PO       5 +Cam_in -Cam_s1 -Cam_p1 -Cam_a3o -Cam_a4o
-               | +Cam_p2
-               | +Cam_p3
 CAM_AL       5 +Cam_a1
                | +Cam_p1 -Cam_a2 -Cam_a3i -Cam_a4i
                | +Cam_a3o -Cam_a3i
