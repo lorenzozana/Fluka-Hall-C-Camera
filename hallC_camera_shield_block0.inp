@@ -468,7 +468,10 @@ PLA CSSO1i3    -5.3449999999999989 0.0 0.65624626728533997 27.456481442492922
 SPH Void       0.0 0.0 0.0 7000.
 * Vacuum Dumpline to remove air
 RCC DumpVac    0.0 0.0 2680. 0.0 0.0 820. 40.640000000000001
-RPP Cam_out    -190.3 -109. -297. -203.1 2888. 3020.
+RPP Cam_out    -190.3 -109. -297. -192.9 2888. 3020.
+RPP Cam_top1   -148.75 -138.55 -192.9 -170.6 2947.95 2993.7
+RPP Cam_top2   -158.87 -138.55 -192.9 -170.6 2937.8 2947.95
+RPP Cam_top3   -169.07 -148.75 -192.9 -170.6 2990.45 3000.61
 RPP Cam_in     -170. -129.3 -294.6 -215.8 2928.5 3009.9
 RPP Cam_s1     -170. -109. -218.3 -215.8 2908.2 3020.
 RPP Cam_s2     -170. -154.75 -218.3 -215.8 2947.95 2959.95
@@ -766,7 +769,7 @@ HALLAIR     55 +wall_in -DumpVac -NippleFl -Nipple -IntCha -BeamIn -UpStTrBP -Tr
                -BP24bUFl -BP24b -BP24bDFl -BP24c -BP24cUFl -BP24cDFl -BP24d -BP24dDFl -BP24dUFl -Be24i -Be24iDFl
                -Be24iUFl -hmsq1usp -hmsq1lsp -shmsbusp -shmsblsp -shmsbsho -shmsbus1 -shmsbls1 -(+AYSpl2 +CSSpl3
                +YSpl7 -CSSpl4 -YSpl1 -YSpl6) -(+CSSHpl2 +CSSHpl4 -CSSpl3 -CSSHpl1 -CSSHpl3 -BLStart)
-               -Cam_out -Cam_a3o -Cam_a4o -Shield
+               -Cam_out -Cam_a3o -Cam_a4o -Shield -Cam_top1 -Cam_top2 -Cam_top3
                | +Cam_a3i
                | +Cam_a4i
                | +Cam_s2 -Cam_s4 -Cam_a3o
@@ -795,10 +798,12 @@ NITROGEN    25 +CSSO2i3 +CSSO3i1 +CSSO6i1 -CSSO4i1 -CSSO5i1 -CCpl2i2 -CSSCuOCi -
                | +CSSO3i1 +CSSO6i1 +CSSO1i2 -YSpl3 -CSSO1i1 -CSSO5i1
                | +YSpl4 +CSSO6i1 +CSSO1i2 -CSSO1i1 -CSSO4i1 -CSSO5i1
                | +YSpl3 +YSpl9 +CSSO1i2 -YSpl4 -YSpl5 -YSpl8
-CAMAIR       5 +Cam_a2 -Cam_p2 -Cam_p3 -Cam_l -Cam_r -Cam_d
 CAMBOX       5 +Cam_out -Cam_in -Cam_s1 -Cam_a1 -Cam_a3o -Cam_a4o
                | +Cam_s4
                | +Cam_s5
+               | +Cam_top1
+               | +Cam_top2
+               | +Cam_top3
 CAM_ST       5 +Cam_s1 -Cam_a3o -Cam_a4o -Cam_s2 -Cam_s3
 CAM_PO       5 +Cam_in -Cam_s1 -Cam_p1 -Cam_a3o -Cam_a4o
                | +Cam_p2
@@ -809,6 +814,7 @@ CAM_AL       5 +Cam_a1
                | +Cam_a4o -Cam_a4i
 CAMERA       5 +Cam_l
                | +Cam_r
+CAMAIR       5 +Cam_a2 -Cam_p2 -Cam_p3 -Cam_l -Cam_r -Cam_d
 CAMD         5 +Cam_d -Cam_r -Cam_l -Cam_p3
 BOX_C        5 +Shield
 * Liquid Helium for the coils
@@ -958,7 +964,7 @@ ASSIGNMA    ALUMINUM    CAM_AL
 ASSIGNMA         AIR    CAMAIR
 ASSIGNMA     SILICON    CAMERA
 ASSIGNMA         AIR      CAMD
-ASSIGNMA        IRON     BOX_C
+ASSIGNMA         AIR     BOX_C
 ASSIGNMA         AIR   HALLAIR
 ASSIGNMA      VACUUM  BEAMLVAC
 ASSIGNMA       SS304  NIPPLEFL
@@ -1041,10 +1047,14 @@ USRBIN           10.  SI1MEVNE      -27.      200.      100.     3100.1MeVHall
 USRBIN         -200.     -300.       0.0       40.       40.      124. &
 USRBIN           10.  SI1MEVNE      -28.     -100.     -200.     3050.1MeVCam
 USRBIN         -200.     -300.     2850.       25.       25.       50. &
+USRBIN           10.  SI1MEVNE      -28.     -110.     -100.     3050.1MeVCam2
+USRBIN         -190.     -300.     2850.       10.       25.       25. &
 USRBIN           10.  SI1MEVNE      -28.    -140.7    -229.6    2998.51MeVCam1
 USRBIN        -168.8    -294.6    2939.9        4.        4.        4. &
 USRBIN           10.      DOSE      -28.     -100.     -200.     3050.DoseCam
 USRBIN         -200.     -300.     2850.       25.       25.       50. &
+USRBIN           10.      DOSE      -28.     -110.     -100.     3050.DoseCam2
+USRBIN         -190.     -300.     2850.       10.       25.       25. &
 USRBIN           10.      DOSE      -28.    -140.7    -229.6    2998.5DoseCam1
 USRBIN        -168.8    -294.6    2939.9        4.        4.        4. &
 USRBDX            1.   NEUTRON      -29.   HALLAIR    CAMBOX          OutflowN

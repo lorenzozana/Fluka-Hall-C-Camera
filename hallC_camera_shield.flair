@@ -2,7 +2,7 @@
 # FLUKA Project file
 Version: 2
 Title: Hall C activation
-Input: hallC_camera_shield.inp
+Input: hallC_camera_shield_block1.inp
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
 Page: Flair
@@ -20,7 +20,7 @@ Run: <default>
 	StartRun: 0
 	Family:  hallC_camera_shield_aa hallC_camera_shield_ab hallC_camera_shield_ac hallC_camera_shield_ad hallC_camera_shield_ae hallC_camera_shield_af hallC_camera_shield_ag hallC_camera_shield_ah hallC_camera_shield_ai hallC_camera_shield_aj
 
-	# USRxxx data file: hallC_camera_shield_27.bnn
+	# USRxxx data file: hallC_camera_shield_block1_27.bnn
 	Data: \I_\U.\e
 		Unit: 27
 		Type: b
@@ -28,7 +28,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: hallC_camera_shield_28.bnn
+	# USRxxx data file: hallC_camera_shield_block1_28.bnn
 	Data: \I_\U.\e
 		Unit: 28
 		Type: b
@@ -36,7 +36,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: hallC_camera_shield_29.bnx
+	# USRxxx data file: hallC_camera_shield_block1_29.bnx
 	Data: \I_\U.\e
 		Unit: 29
 		Type: x
@@ -186,16 +186,6 @@ Material: AL6061T6
 End
 
 # Material
-Material: HLOWDENS
-	alpha: 0
-	color: #70D0B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
 Material: SS347
 	alpha: 0
 	color: #409030
@@ -256,6 +246,16 @@ Material: POTASSIU
 End
 
 # Material
+Material: HLOWDENS
+	alpha: 0
+	color: #70D0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: LQHELIUM
 	alpha: 0
 	color: #A05070
@@ -286,9 +286,9 @@ Material: ZINC
 End
 
 # Material
-Material: SS316LN
+Material: Stainles
 	alpha: 0
-	color: #401010
+	color: #40D0D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -296,9 +296,9 @@ Material: SS316LN
 End
 
 # Material
-Material: Stainles
+Material: SS316LN
 	alpha: 0
-	color: #40D0D0
+	color: #401010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -337,9 +337,9 @@ End
 
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.5
+	Frame.bsplit: 0.99
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.5
+	Frame.vsplit: 0.01
 
 	# Layer
 	Layer: 3D
@@ -351,18 +351,17 @@ Geometry:
 		Options.viewport: 0
 		Palette: True
 		Palette._visible: True
-		Palette.cpd: 1
-		Palette.max: 1000000.0
-		Palette.min: 0.0001
-		Palette.n: 10
+		Palette.cpd: 10
+		Palette.max: 10000000.0
+		Palette.min: 10.0
+		Palette.n: 60
 		Show: 0
 		Show.lattice: 1
 		Show.voxel: 1
-		Usrbin: True
 		Usrbin._visible: True
-		Usrbin.det: 2
-		Usrbin.file: hallC_camera_shield_28.bnn
-		Usrbin.norm: 6.25e+14
+		Usrbin.det: 3
+		Usrbin.file: Farm/NewShield/Newshield_28.dat
+		Usrbin.norm: 1.3e+17
 		deflights: 1
 		layer: 3D
 	End
@@ -372,8 +371,8 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: -0.975054 0 0.221966
-	basisv: 0.0149184 0.997739 0.0655337
+	basisu: -0.791908 0.00437958 0.610625
+	basisv: 0.0560519 0.996274 0.065547
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
@@ -382,12 +381,12 @@ Plot: Red
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 248.832 132.472
+	extends: 100 0.116009
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: -785.041 6.84288 137.891
+	origin: -1874.57 60.6466 706.673
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -414,12 +413,12 @@ Plot: Green
 	cbtics: 0
 	coord: Z-X
 	cpd: 0
-	extends: 69.4444 37.0037
+	extends: 69.4444 47.7481
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -159.176 -230 2945.48
+	origin: -166.345 -180 2976.16
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -440,10 +439,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 144 76.6619
+	extends: 619.174 435.742
 	labels: 1
-	layer: 3D
-	origin: -154.75 -260.387 2960.19
+	layer: Media
+	origin: -158 -94.1095 3093.64
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -455,48 +454,65 @@ Plot: Magenta
 	basisu: -1 0 0
 	basisv: 0 1 0
 	boundaries: 1
+	cbcolors: 0
+	cblog: 0
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 0
 	coord: X-Y
-	extends: 48.2253 25.697
+	cpd: 0
+	extends: 298.598 23927.7
+	grid: 0
+	index: 0
 	labels: 1
 	layer: Media
-	origin: -173.553 -242.198 2953.95
+	origin: -21.9661 -161.452 2953.95
 	subtype: Material
 	title: GeoViewer Magenta plot
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	zlog: 0
+	ztics: 0
 End
 
-# USRBIN plot "USRBIN hallC camera 27"
+# USRBIN plot "1MeV eq accumulated Block 0"
 Plot: hallC_camera_27_plot
 	Format: .jpg
 	Type:   USRBIN
 	axes: Auto
-	bxmax: -140
-	bxmin: -170.
+	bxmax: -150
+	bxmin: -160.
 	bzmax: 3100
 	bzmin: 2500.
 	cbcolors: 30
 	cblog: 1
-	cbmax: 1e-8
-	cbmin: 1e-13
+	cbmax: 5e13
+	cbmin: 5e8
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: hallC_camera_27.bnn
+	datafile: Farm/Update/Block0/data_block0_27.dat
 	det: 1
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 0.00601152802
+	int: 0.00188151125
 	lw.0: 0
-	max: 1.91961735E-09
-	min: 3.98113956E-15
+	max: 1.53816548E-09
+	min: 7.31690424E-13
+	norm: 8.1e21
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: USRBIN hallC camera 27
+	title: 1MeV eq accumulated Block 0
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
@@ -511,39 +527,40 @@ Plot: hallC_camera_27_plot
 	ztics: 0
 End
 
-# USRBIN plot "USRBIN hallC camera 27"
+# USRBIN plot "1MeV eq accumulated Block 1"
 Plot: hallC_camera_27_plot01
 	Format: .jpg
 	Type:   USRBIN
 	axes: Auto
-	bxmax: -140
-	bxmin: -170.
+	bxmax: -150
+	bxmin: -160.
 	bzmax: 3100
 	bzmin: 2500.
 	cbcolors: 30
 	cblog: 1
-	cbmax: 1e-8
-	cbmin: 1e-13
+	cbmax: 5e13
+	cbmin: 5e8
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: hallC_camera_27_oldshield.bnn
+	datafile: Farm/Update/Block1/data_block1_27.dat
 	det: 1
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
-	index: 0
-	int: 0.00618212868
+	index: 8
+	int: 0.00163386936
 	lw.0: 0
-	max: 2.02978656E-09
-	min: 3.00983946E-15
+	max: 1.55176305E-09
+	min: 4.63563866E-13
+	norm: 8.1e21
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: USRBIN hallC camera 27
+	title: 1MeV eq accumulated Block 1
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
@@ -558,82 +575,88 @@ Plot: hallC_camera_27_plot01
 	ztics: 0
 End
 
-# USRBIN plot "USRBIN hallC camera 27"
+# USRBIN plot "1MeV eq accumulated Block 1"
+Plot: hallC_camera_27_plot03
+	Format: .jpg
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -150
+	bxmin: -160.
+	bzmax: 3100
+	bzmin: 2500.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 5e13
+	cbmin: 5e8
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Update/Block1_high/data_block1_high_27.dat
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 11
+	int: 0.00154680049
+	lw.0: 0
+	max: 1.54117397E-09
+	min: 4.27461479E-13
+	norm: 8.1e21
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: 1MeV eq accumulated Block 1
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "1MeV eq accumulated Block 2"
 Plot: hallC_camera_27_plot02
 	Format: .jpg
 	Type:   USRBIN
 	axes: Auto
+	bxmax: -150
+	bxmin: -160.
 	bzmax: 3100
 	bzmin: 2500.
 	cbcolors: 30
 	cblog: 1
-	cbmax: 1e-8
-	cbmin: 1e-13
+	cbmax: 5e13
+	cbmin: 5e8
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: hallC_camera_27.bnn
+	datafile: Farm/Block2/data_block2_27.dat
 	det: 1
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
-	index: 0
-	int: 48.6777234
+	index: 2
+	int: 0.0016104799
 	lw.0: 0
-	max: 1.01339701E-05
-	min: 1.41879546E-11
-	proj: Y
-	ps.0: 0
-	pt.0: 0
-	swap: 0
-	title: USRBIN hallC camera 27
-	with.0: errorbars
-	x2log: 0
-	x2tics: 0
-	xlog: 0
-	xrebin: 1
-	y2log: 0
-	y2tics: 0
-	ylog: 0
-	yrebin: 1
-	zlog: 0
-	zrebin: 1
-	ztics: 0
-End
-
-# USRBIN plot "USRBIN hallC camera 28"
-Plot: hallC_camera_28_plot
-	Format: .eps
-	Type:   USRBIN
-	axes: Auto
-	bxmax: -144
-	bxmin: -164.
-	cbcolors: 30
-	cblog: 1
-	cbmax: 1e-9
-	cbmin: 1e-14
-	cbpalette: FLUKA
-	cbround: 0
-	cbtics: 1
-	cpd: 0
-	datafile: hallC_camera_shield_28.bnn
-	det: 1
-	errors: 0
-	geo: -Auto-
-	grid: 0
-	hist: 2D Projection
-	index: 1
-	int: 6.82049153E-05
-	lw.0: 0
-	max: 1.24857003E-09
-	min: 4.97696835E-20
+	max: 1.54846902E-09
+	min: 4.33670379E-13
+	norm: 8.1e21
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: USRBIN hallC camera 28
+	title: 1MeV eq accumulated Block 2
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
@@ -648,44 +671,45 @@ Plot: hallC_camera_28_plot
 	ztics: 0
 End
 
-# USRBIN plot "USRBIN hallC camera 28"
+# USRBIN plot "Accumulated 1MeVeq 150 days 100muA Block0"
 Plot: hallC_camera_28_plot01
-	Format: .eps
+	Format: .png
 	Type:   USRBIN
 	axes: Auto
-	bymax: -236
-	bymin: -292.
 	cbcolors: 30
 	cblog: 1
-	cbmax: 1e-9
-	cbmin: 1e-14
+	cbmax: 5e+11
+	cbmin: 5e+8
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: hallC_camera_28_photon.bnn
-	det: 1
+	datafile: Farm/NewShield/Newshield_28.dat
+	det: 2
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
-	index: 1
-	int: 0.000344224611
+	index: 2
+	int: 1.47839669E-07
 	lw.0: 0
-	max: 5.08791942E-09
-	min: 2.19540311E-18
-	proj: Y
+	max: 1.96237102E-12
+	min: 8.07598508E-13
+	norm: 8.1e+21
+	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: USRBIN hallC camera 28
+	title: Accumulated 1MeVeq 150 days 100muA Block0
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
+	xlabel: z(cm)
 	xlog: 0
 	xrebin: 1
 	y2log: 0
 	y2tics: 0
+	ylabel: y(cm)
 	ylog: 0
 	yrebin: 1
 	zlog: 0
@@ -693,45 +717,95 @@ Plot: hallC_camera_28_plot01
 	ztics: 0
 End
 
-# USRBIN plot "USRBIN hallC camera 28"
-Plot: hallC_camera_28_plot02
-	Format: .eps
+# USRBIN plot "Accumulated 1MeVeq 150 days 100muA Block0"
+Plot: hallC_camera_28_plot03
+	Format: .png
 	Type:   USRBIN
 	axes: Auto
 	bxmax: -140.7
 	bxmin: -168.
 	cbcolors: 30
 	cblog: 1
-	cbmax: 1e5
-	cbmin: 0.0001
+	cbmax: 5e+13
+	cbmin: 5e+8
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: hallC_camera_shield_28.bnn
+	datafile: Farm/Update/Block0/data_block0_28.dat
+	det: 2
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 3
+	int: 2.78993259E-07
+	lw.0: 0
+	max: 3.45723081E-12
+	min: 1.95442794E-12
+	norm: 8.1e+21
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated 1MeVeq 150 days 100muA Block0
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated Dose (RAD) 150 days 100muA Block0"
+Plot: hallC_camera_28_plot02
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -140.7
+	bxmin: -168.8
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1e4
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Update/Block0/data_block0_28.dat
 	det: 4
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
 	index: 1
-	int: 2.54360858E-10
+	int: 2.2639178E-10
 	lw.0: 0
-	max: 3.09053523E-14
-	min: 2.12666856E-19
-	norm: 1.3e15
+	max: 4.32118432E-15
+	min: 1.15326003E-15
+	norm: 1.3e17
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: USRBIN hallC camera 28
+	title: Accumulated Dose (RAD) 150 days 100muA Block0
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
+	xlabel: z(cm)
 	xlog: 0
 	xrebin: 1
 	y2log: 0
 	y2tics: 0
+	ylabel: y(cm)
 	ylog: 0
 	yrebin: 1
 	zlog: 0
@@ -739,45 +813,383 @@ Plot: hallC_camera_28_plot02
 	ztics: 0
 End
 
-# USRBIN plot "USRBIN hallC camera 28"
-Plot: hallC_camera_28_plot03
-	Format: .eps
+# USRBIN plot "Accumulated 1MeVeq 150 days 100muA Block1"
+Plot: hallC_camera_28_plot05
+	Format: .png
 	Type:   USRBIN
 	axes: Auto
-	bxmax: -140.7
-	bxmin: -168.
+	bxmax: -140
+	bxmin: -168.8
 	cbcolors: 30
 	cblog: 1
-	cbmax: 1e13
-	cbmin: 1e3
+	cbmax: 5e+13
+	cbmin: 5e+8
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: hallC_camera_shield_28.bnn
-	det: 2
+	datafile: Farm/Update/Block1/data_block1_28.dat
+	det: 1
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
-	index: 1
-	int: 3.40504996E-07
+	index: 4
+	int: 1.61928742E-05
 	lw.0: 0
-	max: 1.50061942E-11
-	min: 2.14409741E-16
-	norm: 8.1e21
+	max: 1.75743073E-10
+	min: 4.95205385E-13
+	norm: 8.1e+21
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: USRBIN hallC camera 28
+	title: Accumulated 1MeVeq 150 days 100muA Block1
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
+	xlabel: z(cm)
 	xlog: 0
 	xrebin: 1
 	y2log: 0
 	y2tics: 0
+	ylabel: y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated 1MeVeq 150 days 100muA Block1"
+Plot: hallC_camera_28_plot11
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -140
+	bxmin: -168.8
+	cbcolors: 30
+	cblog: 1
+	cbmax: 5e+13
+	cbmin: 5e+8
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Update/Block1_high/data_block1_high_28.dat
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 12
+	int: 1.32031644E-05
+	lw.0: 0
+	max: 1.1744633E-10
+	min: 4.45361548E-13
+	norm: 8.1e+21
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated 1MeVeq 150 days 100muA Block1
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated Dose (RAD) 150 days 100muA Block1"
+Plot: hallC_camera_28_plot04
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -140.7
+	bxmin: -168.8
+	cbcolors: 30
+	cblog: 1
+	cbmax: 5000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Update/Block1/data_block1_28.dat
+	det: 4
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 12
+	int: 1.30773307E-10
+	lw.0: 0
+	max: 3.30237119E-15
+	min: 4.20241871E-16
+	norm: 1.3e17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated Dose (RAD) 150 days 100muA Block1
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated Dose (RAD) 150 days 100muA Block1"
+Plot: hallC_camera_28_plot10
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -140.7
+	bxmin: -166.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1e8
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Update/Block1_high/data_block1_high_28.dat
+	det: 6
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 5
+	int: 7.02042798E-11
+	lw.0: 0
+	max: 1.78175138E-15
+	min: 2.54324686E-16
+	norm: 1.3e17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated Dose (RAD) 150 days 100muA Block1
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated 1MeVeq 150 days 100muA Block2"
+Plot: hallC_camera_28_plot07
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -144
+	bxmin: -168.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 5e+13
+	cbmin: 5e+8
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Block2/data_block2_28.dat
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 6
+	int: 1.2396832E-05
+	lw.0: 0
+	max: 1.78444814E-10
+	min: 2.04792848E-13
+	norm: 8.1e+21
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated 1MeVeq 150 days 100muA Block2
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated Dose (RAD) 150 days 100muA Block2"
+Plot: hallC_camera_28_plot06
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -144
+	bxmin: -168.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1e6
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Block2/data_block2_28.dat
+	det: 3
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 7
+	int: 6.65614995E-07
+	lw.0: 0
+	max: 1.02468537E-11
+	min: 3.90342312E-18
+	norm: 1.3e17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated Dose (RAD) 150 days 100muA Block2
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated Dose (RAD) 150 days 100muA Block1"
+Plot: hallC_camera_28_plot08
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -144
+	bxmin: -168.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1e6
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Block1/data_block1_28.dat
+	det: 3
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 9
+	int: 6.69852705E-07
+	lw.0: 0
+	max: 1.06424912E-11
+	min: 9.09235937E-18
+	norm: 1.3e17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated Dose (RAD) 150 days 100muA Block1
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated Dose (RAD) 150 days 100muA Block0"
+Plot: hallC_camera_28_plot09
+	Format: .png
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -144
+	bxmin: -168.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1e6
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Block0/data_block0_28.dat
+	det: 3
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 10
+	int: 1.98897426E-06
+	lw.0: 0
+	max: 2.37482273E-11
+	min: 6.01348791E-17
+	norm: 1.3e17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated Dose (RAD) 150 days 100muA Block0
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: y(cm)
 	ylog: 0
 	yrebin: 1
 	zlog: 0
@@ -797,7 +1209,7 @@ Plot: hallC_camera_29_plot
 	cblog: 0
 	cbpalette: FLUKA
 	cbround: 0
-	cbtics: 0
+	cbtics: 1
 	cpd: 0
 	det.0: 0
 	det.1: 0
@@ -861,6 +1273,8 @@ Plot: hallC_camera_29_plot01
 	Type:   USR-1D
 	block.0: 0
 	block.1: 0
+	block.2: 0
+	block.3: 0
 	cbcolors: 0
 	cblog: 0
 	cbpalette: FLUKA
@@ -869,34 +1283,56 @@ Plot: hallC_camera_29_plot01
 	cpd: 0
 	det.0: 8
 	det.1: 8
-	file.0: hallC_camera_29_tab_oldshield.lis
-	file.1: hallC_camera_shield_29_tab.lis
+	det.2: 8
+	det.3: 8
+	file.0: Farm/Oldshield/Oldshield_29_tab.lis
+	file.1: Farm/Update/Block0/data_block0_29_tab.lis
+	file.2: Farm/Update/Block1/data_block1_29_tab.lis
+	file.3: Farm/Update/Block1_high/data_block1_high_29_tab.lis
 	grid: 0
 	index: 0
 	key.0: 1
 	key.1: 1
+	key.2: 1
+	key.3: 1
 	lw.0: 1
 	lw.1: 1
+	lw.2: 1
+	lw.3: 1
 	name.0: Flow Inside Neutron
-	name.1: Flow Inside Neutron New Shield
-	ndetectors: 2
+	name.1: Flow Inside Neutron Block0
+	name.2: Flow Inside Neutron Block1
+	name.3: Flow Inside Neutron Block1 high
+	ndetectors: 4
 	ps.0: 1
 	ps.1: 1
+	ps.2: 1
+	ps.3: 1
 	pt.0: 0
 	pt.1: 0
+	pt.2: 0
+	pt.3: 0
 	show.0: 1
 	show.1: 1
+	show.2: 1
+	show.3: 1
 	title: USR-1D hallC camera 29
 	with.0: histogram
 	with.1: histogram
+	with.2: histogram
+	with.3: histogram
 	x2log: 0
 	x2tics: 0
 	xlog: 1
 	y.0: 0
 	y.1: 0
+	y.2: 0
+	y.3: 0
 	y2log: 0
 	y2tics: 0
 	ylog: 1
+	ymax: 100
+	ymin: 1e-8
 	zlog: 0
 	ztics: 0
 End

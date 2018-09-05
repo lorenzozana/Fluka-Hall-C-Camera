@@ -477,6 +477,7 @@ RPP Cam_s4     -170. -160.75 -228.4 -225.9 2948.95 2958.95
 RPP Cam_p1     -170. -139.5 -294.6 -228.4 2938.7 2999.7
 RPP Cam_a1     -170. -129.3 -297. -294.6 2928.5 3009.9
 RPP Cam_a2     -168.8 -140.7 -294.6 -229.6 2939.9 2998.5
+RPP Cam_d      -154.8 -154.7 -294.6 -229.6 2939.9 2998.5
 RPP Cam_p2     -168.7 -163.8 -294.6 -229.7 2939.9 2998.5
 RPP Cam_p3     -163.8 -140.7 -294.6 -229.7 2940. 2945.
 RCC Cam_a3i    -154.75 -229.6 2953.95 0.0 200. 0.0 4.8
@@ -792,7 +793,8 @@ NITROGEN    25 +CSSO2i3 +CSSO3i1 +CSSO6i1 -CSSO4i1 -CSSO5i1 -CCpl2i2 -CSSCuOCi -
                | +CSSO3i1 +CSSO6i1 +CSSO1i2 -YSpl3 -CSSO1i1 -CSSO5i1
                | +YSpl4 +CSSO6i1 +CSSO1i2 -CSSO1i1 -CSSO4i1 -CSSO5i1
                | +YSpl3 +YSpl9 +CSSO1i2 -YSpl4 -YSpl5 -YSpl8
-CAMAIR       5 +Cam_a2 -Cam_l -Cam_r
+CAMAIR       5 +Cam_a2 -Cam_l -Cam_r -Cam_d
+CAMD         5 +Cam_d -Cam_l -Cam_r
 CAMBOX       5 +Cam_out -Cam_in -Cam_s1 -Cam_a1 -Cam_a3o -Cam_a4o
                | +Cam_s4
                | +Cam_s5
@@ -950,6 +952,7 @@ ASSIGNMA    Stainles    CAM_ST
 ASSIGNMA    ALUMINUM    CAM_AL
 ASSIGNMA         AIR    CAMAIR
 ASSIGNMA     SILICON    CAMERA
+ASSIGNMA      CARBON      CAMD
 ASSIGNMA         AIR   HALLAIR
 ASSIGNMA      VACUUM  BEAMLVAC
 ASSIGNMA       SS304  NIPPLEFL
@@ -1032,10 +1035,14 @@ USRBIN           10.  SI1MEVNE      -27.      200.      100.     3100.1MeVHall
 USRBIN         -200.     -300.       0.0       40.       40.      124. &
 USRBIN           10.  SI1MEVNE      -28.     -100.     -200.     3050.1MeVCam
 USRBIN         -200.     -300.     2850.       25.       25.       50. &
+USRBIN           10.  SI1MEVNE      -28.     -110.     -100.     3050.1MeVCam2
+USRBIN         -190.     -300.     2850.       10.       25.       25. &
 USRBIN           10.  SI1MEVNE      -28.    -140.7    -229.6    2998.51MeVCam1
 USRBIN        -168.8    -294.6    2939.9        4.        4.        4. &
 USRBIN           10.      DOSE      -28.     -100.     -200.     3050.DoseCam
 USRBIN         -200.     -300.     2850.       25.       25.       50. &
+USRBIN           10.      DOSE      -28.     -110.     -100.     3050.DoseCam2
+USRBIN         -190.     -300.     2850.       10.       25.       25. &
 USRBIN           10.      DOSE      -28.    -140.7    -229.6    2998.5DoseCam1
 USRBIN        -168.8    -294.6    2939.9        4.        4.        4. &
 USRBDX            1.   NEUTRON      -29.   HALLAIR    CAMBOX          OutflowN

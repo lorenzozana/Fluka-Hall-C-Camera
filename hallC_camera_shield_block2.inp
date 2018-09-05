@@ -468,7 +468,7 @@ PLA CSSO1i3    -5.3449999999999989 0.0 0.65624626728533997 27.456481442492922
 SPH Void       0.0 0.0 0.0 7000.
 * Vacuum Dumpline to remove air
 RCC DumpVac    0.0 0.0 2680. 0.0 0.0 820. 40.640000000000001
-RPP Cam_out    -190.3 -109. -297. -203.1 2888. 3020.
+RPP Cam_out    -190.3 -109. -297. -192.9 2888. 3020.
 RPP Cam_in     -170. -129.3 -294.6 -215.8 2928.5 3009.9
 RPP Cam_s1     -170. -109. -218.3 -215.8 2908.2 3020.
 RPP Cam_s2     -170. -154.75 -218.3 -215.8 2947.95 2959.95
@@ -487,7 +487,7 @@ RCC Cam_a4i    -154.75 -229.6 2984.45 0.0 200. 0.0 4.8
 RCC Cam_a4o    -154.75 -229.6 2984.45 0.0 200. 0.0 6.
 RCC Cam_l      -154.75 -250. 2953.95 0.0 15. 0.0 4.8
 RCC Cam_r      -154.75 -250. 2984.45 0.0 15. 0.0 4.8
-RPP Shield     -193.2 -61.2 -297. -165. 2522. 2588.
+RPP Shield     -193.2 -61.2 -297. -165. 2456. 2588.
 END
 * Black hole
 BLKBODY      5 +BlkBody -Void
@@ -795,7 +795,6 @@ NITROGEN    25 +CSSO2i3 +CSSO3i1 +CSSO6i1 -CSSO4i1 -CSSO5i1 -CCpl2i2 -CSSCuOCi -
                | +CSSO3i1 +CSSO6i1 +CSSO1i2 -YSpl3 -CSSO1i1 -CSSO5i1
                | +YSpl4 +CSSO6i1 +CSSO1i2 -CSSO1i1 -CSSO4i1 -CSSO5i1
                | +YSpl3 +YSpl9 +CSSO1i2 -YSpl4 -YSpl5 -YSpl8
-CAMAIR       5 +Cam_a2 -Cam_p2 -Cam_p3 -Cam_l -Cam_r -Cam_d
 CAMBOX       5 +Cam_out -Cam_in -Cam_s1 -Cam_a1 -Cam_a3o -Cam_a4o
                | +Cam_s4
                | +Cam_s5
@@ -809,6 +808,7 @@ CAM_AL       5 +Cam_a1
                | +Cam_a4o -Cam_a4i
 CAMERA       5 +Cam_l
                | +Cam_r
+CAMAIR       5 +Cam_a2 -Cam_p2 -Cam_p3 -Cam_l -Cam_r -Cam_d
 CAMD         5 +Cam_d -Cam_r -Cam_l -Cam_p3
 BOX_C        5 +Shield
 * Liquid Helium for the coils

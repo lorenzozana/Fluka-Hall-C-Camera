@@ -12,6 +12,148 @@ F77bound: True
 F77dline: False
 
 # Run information
+Run: <default>
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 0
+	Family:  hallC_camera_oldshield_aa hallC_camera_oldshield_ab hallC_camera_oldshield_ac hallC_camera_oldshield_ad hallC_camera_oldshield_ae hallC_camera_oldshield_af hallC_camera_oldshield_ag hallC_camera_oldshield_ah hallC_camera_oldshield_ai hallC_camera_oldshield_aj
+
+	# USRxxx data file: hallC_camera_oldshield_27.bnn
+	Data: \I_\U.\e
+		Unit: 27
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: hallC_camera_oldshield_28.bnn
+	Data: \I_\U.\e
+		Unit: 28
+		Type: b
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+
+	# USRxxx data file: hallC_camera_oldshield_29.bnx
+	Data: \I_\U.\e
+		Unit: 29
+		Type: x
+		Rule: +,\I\d\d\d_fort\.\U
+		Rule: +,\I\d\d\d_ftn\.\U
+	End
+End
+
+# Run information
+Run: hallC_camera_oldshield_aa
+	Rnd:      1
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726298
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_ab
+	Rnd:      2
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726298
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_ac
+	Rnd:      3
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726298
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_ad
+	Rnd:      4
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726298
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_ae
+	Rnd:      5
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726298
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_af
+	Rnd:      6
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726298
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_ag
+	Rnd:      7
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726299
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_ah
+	Rnd:      8
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726299
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_ai
+	Rnd:      9
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726299
+	Parent:    <default>
+End
+
+# Run information
+Run: hallC_camera_oldshield_aj
+	Rnd:      10
+	Prev:     0
+	Last:     5
+	Status:   4
+	Pid:      0
+	StartRun: 1532726299
+	Parent:    <default>
+End
 
 # Material
 Material: D-LIQUID
@@ -37,6 +179,16 @@ End
 Material: AL6061T6
 	alpha: 0
 	color: #105030
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
+Material: HLOWDENS
+	alpha: 0
+	color: #70D0B0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -104,16 +256,6 @@ Material: POTASSIU
 End
 
 # Material
-Material: HLOWDENS
-	alpha: 0
-	color: #70D0B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
 Material: LQHELIUM
 	alpha: 0
 	color: #A05070
@@ -144,9 +286,9 @@ Material: ZINC
 End
 
 # Material
-Material: Stainles
+Material: SS316LN
 	alpha: 0
-	color: #40D0D0
+	color: #401010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -154,9 +296,9 @@ Material: Stainles
 End
 
 # Material
-Material: SS316LN
+Material: Stainles
 	alpha: 0
-	color: #401010
+	color: #40D0D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -195,9 +337,9 @@ End
 
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.5
+	Frame.bsplit: 0.99
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.5
+	Frame.vsplit: 0.01
 
 	# Layer
 	Layer: 3D
@@ -209,18 +351,25 @@ Geometry:
 		Options.viewport: 0
 		Palette: True
 		Palette._visible: True
-		Palette.cpd: 1
-		Palette.max: 1000000.0
-		Palette.min: 0.0001
-		Palette.n: 10
+		Palette.alphamax: 0
+		Palette.alphamin: 0
+		Palette.cpd: 10
+		Palette.inv: 0
+		Palette.log: 1
+		Palette.max: 10000000.0
+		Palette.min: 10.0
+		Palette.n: 60
+		Palette.palette: FLUKA
+		Palette.smooth: 0
 		Show: 0
 		Show.lattice: 1
 		Show.voxel: 1
 		Usrbin: True
 		Usrbin._visible: True
-		Usrbin.det: 2
-		Usrbin.file: hallC_camera_shield_28.bnn
-		Usrbin.norm: 6.25e+14
+		Usrbin.det: 3
+		Usrbin.file: Farm/Oldshield/Oldshield_28.dat
+		Usrbin.norm: 1.3e+17
+		Usrbin.palette: Palette
 		deflights: 1
 		layer: 3D
 	End
@@ -240,7 +389,7 @@ Plot: Red
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 248.832 132.472
+	extends: 248.832 0.22377
 	grid: 0
 	index: 0
 	labels: 1
@@ -272,12 +421,12 @@ Plot: Green
 	cbtics: 0
 	coord: Z-X
 	cpd: 0
-	extends: 69.4444 37.0037
+	extends: 2662.33 1418.63
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -159.176 -230 2945.48
+	origin: -857.807 -228 1524.25
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -300,8 +449,8 @@ Plot: Blue
 	coord: Z-Y
 	extends: 144 76.6619
 	labels: 1
-	layer: 3D
-	origin: -154.75 -260.387 2960.19
+	layer: Media
+	origin: -154.75 -248.168 2986.14
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -314,139 +463,48 @@ Plot: Magenta
 	basisv: 0 1 0
 	boundaries: 1
 	coord: X-Y
-	extends: 48.2253 25.697
+	extends: 57.8704 1712.96
 	labels: 1
 	layer: Media
-	origin: -173.553 -242.198 2953.95
+	origin: -167.378 -259.607 2953.95
 	subtype: Material
 	title: GeoViewer Magenta plot
 End
 
-# USRBIN plot "USRBIN hallC camera 27"
+# USRBIN plot "1MeV eq accumulated Previous shielding"
 Plot: hallC_camera_27_plot
 	Format: .jpg
 	Type:   USRBIN
 	axes: Auto
-	bxmax: -140
-	bxmin: -170.
+	bxmax: -150
+	bxmin: -160.
 	bzmax: 3100
 	bzmin: 2500.
 	cbcolors: 30
 	cblog: 1
-	cbmax: 1e-8
-	cbmin: 1e-13
+	cbmax: 5e13
+	cbmin: 5e8
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: hallC_camera_27.bnn
+	datafile: Farm/Oldshield/Oldshield_27.dat
 	det: 1
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 0.00601152802
+	int: 0.00189683132
 	lw.0: 0
-	max: 1.91961735E-09
-	min: 3.98113956E-15
+	max: 1.55057123E-09
+	min: 1.06901521E-12
+	norm: 8.1e21
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: USRBIN hallC camera 27
-	with.0: errorbars
-	x2log: 0
-	x2tics: 0
-	xlog: 0
-	xrebin: 1
-	y2log: 0
-	y2tics: 0
-	ylog: 0
-	yrebin: 1
-	zlog: 0
-	zrebin: 1
-	ztics: 0
-End
-
-# USRBIN plot "USRBIN hallC camera 27"
-Plot: hallC_camera_27_plot01
-	Format: .jpg
-	Type:   USRBIN
-	axes: Auto
-	bxmax: -140
-	bxmin: -170.
-	bzmax: 3100
-	bzmin: 2500.
-	cbcolors: 30
-	cblog: 1
-	cbmax: 1e-8
-	cbmin: 1e-13
-	cbpalette: FLUKA
-	cbround: 0
-	cbtics: 1
-	cpd: 0
-	datafile: hallC_camera_27_oldshield.bnn
-	det: 1
-	errors: 0
-	geo: -Auto-
-	grid: 0
-	hist: 2D Projection
-	index: 0
-	int: 0.00618212868
-	lw.0: 0
-	max: 2.02978656E-09
-	min: 3.00983946E-15
-	proj: X
-	ps.0: 0
-	pt.0: 0
-	swap: 0
-	title: USRBIN hallC camera 27
-	with.0: errorbars
-	x2log: 0
-	x2tics: 0
-	xlog: 0
-	xrebin: 1
-	y2log: 0
-	y2tics: 0
-	ylog: 0
-	yrebin: 1
-	zlog: 0
-	zrebin: 1
-	ztics: 0
-End
-
-# USRBIN plot "USRBIN hallC camera 27"
-Plot: hallC_camera_27_plot02
-	Format: .jpg
-	Type:   USRBIN
-	axes: Auto
-	bzmax: 3100
-	bzmin: 2500.
-	cbcolors: 30
-	cblog: 1
-	cbmax: 1e-8
-	cbmin: 1e-13
-	cbpalette: FLUKA
-	cbround: 0
-	cbtics: 1
-	cpd: 0
-	datafile: hallC_camera_27.bnn
-	det: 1
-	errors: 0
-	geo: -Auto-
-	grid: 0
-	hist: 2D Projection
-	index: 0
-	int: 48.6777234
-	lw.0: 0
-	max: 1.01339701E-05
-	min: 1.41879546E-11
-	proj: Y
-	ps.0: 0
-	pt.0: 0
-	swap: 0
-	title: USRBIN hallC camera 27
+	title: 1MeV eq accumulated Previous shielding
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
@@ -506,129 +564,38 @@ Plot: hallC_camera_28_plot
 	ztics: 0
 End
 
-# USRBIN plot "USRBIN hallC camera 28"
-Plot: hallC_camera_28_plot01
-	Format: .eps
-	Type:   USRBIN
-	axes: Auto
-	bymax: -236
-	bymin: -292.
-	cbcolors: 30
-	cblog: 1
-	cbmax: 1e-9
-	cbmin: 1e-14
-	cbpalette: FLUKA
-	cbround: 0
-	cbtics: 1
-	cpd: 0
-	datafile: hallC_camera_28_photon.bnn
-	det: 1
-	errors: 0
-	geo: -Auto-
-	grid: 0
-	hist: 2D Projection
-	index: 1
-	int: 0.000344224611
-	lw.0: 0
-	max: 5.08791942E-09
-	min: 2.19540311E-18
-	proj: Y
-	ps.0: 0
-	pt.0: 0
-	swap: 0
-	title: USRBIN hallC camera 28
-	with.0: errorbars
-	x2log: 0
-	x2tics: 0
-	xlog: 0
-	xrebin: 1
-	y2log: 0
-	y2tics: 0
-	ylog: 0
-	yrebin: 1
-	zlog: 0
-	zrebin: 1
-	ztics: 0
-End
-
-# USRBIN plot "USRBIN hallC camera 28"
-Plot: hallC_camera_28_plot02
+# USRBIN plot "Accumulated 1MeVeq Old Shielding"
+Plot: oldshield_28_plot03
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
 	bxmax: -140.7
-	bxmin: -168.
+	bxmin: -168.8
 	cbcolors: 30
 	cblog: 1
-	cbmax: 1e5
-	cbmin: 0.0001
+	cbmax: 5e13
+	cbmin: 5e8
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: hallC_camera_shield_28.bnn
-	det: 4
-	errors: 0
-	geo: -Auto-
-	grid: 0
-	hist: 2D Projection
-	index: 1
-	int: 2.54360858E-10
-	lw.0: 0
-	max: 3.09053523E-14
-	min: 2.12666856E-19
-	norm: 1.3e15
-	proj: X
-	ps.0: 0
-	pt.0: 0
-	swap: 0
-	title: USRBIN hallC camera 28
-	with.0: errorbars
-	x2log: 0
-	x2tics: 0
-	xlog: 0
-	xrebin: 1
-	y2log: 0
-	y2tics: 0
-	ylog: 0
-	yrebin: 1
-	zlog: 0
-	zrebin: 1
-	ztics: 0
-End
-
-# USRBIN plot "USRBIN hallC camera 28"
-Plot: hallC_camera_28_plot03
-	Format: .eps
-	Type:   USRBIN
-	axes: Auto
-	bxmax: -140.7
-	bxmin: -168.
-	cbcolors: 30
-	cblog: 1
-	cbmax: 1e13
-	cbmin: 1e3
-	cbpalette: FLUKA
-	cbround: 0
-	cbtics: 1
-	cpd: 0
-	datafile: hallC_camera_shield_28.bnn
+	datafile: Farm/Oldshield/Oldshield_28.dat
 	det: 2
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
 	index: 1
-	int: 3.40504996E-07
+	int: 1.55275197E-06
 	lw.0: 0
-	max: 1.50061942E-11
-	min: 2.14409741E-16
+	max: 2.38725185E-11
+	min: 7.81631097E-12
 	norm: 8.1e21
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 0
-	title: USRBIN hallC camera 28
+	title: Accumulated 1MeVeq Old Shielding
 	with.0: errorbars
 	x2log: 0
 	x2tics: 0
@@ -636,6 +603,54 @@ Plot: hallC_camera_28_plot03
 	xrebin: 1
 	y2log: 0
 	y2tics: 0
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Old Shield Dose (RAD)"
+Plot: oldshield_28_plot05
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -140.7
+	bxmin: -168.8
+	cbcolors: 30
+	cblog: 1
+	cbmax: 5000
+	cbmin: 1
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Oldshield/Oldshield_28.dat
+	det: 4
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 2
+	int: 1.27179823E-09
+	lw.0: 0
+	max: 2.60327614E-14
+	min: 6.94979522E-15
+	norm: 1.3e+17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Old Shield Dose (RAD)
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: Z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: Y(cm)
 	ylog: 0
 	yrebin: 1
 	zlog: 0
