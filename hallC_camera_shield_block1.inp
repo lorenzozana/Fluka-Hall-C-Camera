@@ -7,7 +7,7 @@ BEAM           -10.6             .142857      0.01      0.01          ELECTRON
 * Define the beam position
 BEAMPOS          0.0       0.0    -1400.
 RANDOMIZ          1.   123456.
-START      10000000.
+START      50000000.
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT
 PHOTONUC          1.                      BLCKHOLE  @LASTMAT          ELECTNUC
 GEOBEGIN                                                 0.0          COMBNAME
@@ -17,11 +17,11 @@ SPH BlkBody    0.0 0.0 0.0 10000.
 * Air around the beam line
 RCC HallAir    0.0 0.0 -3500. 0.0 0.0 7000. 1000.
 * Wall in Hall-C
-RCC wall_in    -485. -297. 537. 0.0 1627. 0.0 2546.
-RCC wall_out   -485. -447. 537. 0.0 1777. 0.0 2694.7
-SPH wall_tin   -485. -3435.26 537. 5402.78
-SPH wall_tou   -485. -3435.26 537. 5472.78
-RCC wall_min   -485. -9000. 537. 0.0 10330. 0.0 5600.
+RCC wall_in    -469. -397. 469. 0.0 1627. 0.0 2286.
+RCC wall_out   -469. -547. 469. 0.0 1777. 0.0 2436.
+SPH wall_tin   -469. -3665.34 469. 5402.78
+SPH wall_tou   -469. -3670.74 469. 5472.78
+RCC wall_min   -469. -9100. 469. 0.0 10330. 0.0 5600.
 * Nipple Flange
 RCC NippleFl   0.0 0.0 73.980040000000002 0.0 0.0 1.3004800000000012
               3.5001199999999999
@@ -468,29 +468,33 @@ PLA CSSO1i3    -5.3449999999999989 0.0 0.65624626728533997 27.456481442492922
 SPH Void       0.0 0.0 0.0 7000.
 * Vacuum Dumpline to remove air
 RCC DumpVac    0.0 0.0 2680. 0.0 0.0 820. 40.640000000000001
-RPP Cam_out    -190.3 -109. -297. -192.9 2888. 3020.
-RPP Cam_top1   -148.75 -138.55 -192.9 -170.6 2947.95 2993.7
-RPP Cam_top2   -158.87 -138.55 -192.9 -170.6 2937.8 2947.95
-RPP Cam_top3   -169.07 -148.75 -192.9 -170.6 2990.45 3000.61
-RPP Cam_in     -170. -129.3 -294.6 -215.8 2928.5 3009.9
-RPP Cam_s1     -170. -109. -218.3 -215.8 2908.2 3020.
-RPP Cam_s2     -170. -154.75 -218.3 -215.8 2947.95 2959.95
-RPP Cam_s3     -170. -154.75 -218.3 -215.8 2978.45 2990.45
-RPP Cam_s5     -170. -160.75 -218.3 -215.8 2979.45 2989.45
-RPP Cam_s4     -170. -160.75 -218.3 -215.8 2948.95 2958.95
-RPP Cam_p1     -170. -139.5 -294.6 -228.4 2938.7 2999.7
-RPP Cam_a1     -170. -129.3 -297. -294.6 2928.5 3009.9
-RPP Cam_a2     -168.8 -140.7 -294.6 -229.6 2939.9 2998.5
-RPP Cam_d      -154.8 -154.7 -294.6 -229.6 2939.9 2998.5
-RPP Cam_p2     -168.7 -163.8 -294.6 -229.7 2939.9 2998.5
-RPP Cam_p3     -163.8 -140.7 -294.6 -229.7 2940. 2945.
-RCC Cam_a3i    -154.75 -229.6 2953.95 0.0 200. 0.0 4.8
-RCC Cam_a3o    -154.75 -229.6 2953.95 0.0 200. 0.0 6.
-RCC Cam_a4i    -154.75 -229.6 2984.45 0.0 200. 0.0 4.8
-RCC Cam_a4o    -154.75 -229.6 2984.45 0.0 200. 0.0 6.
-RCC Cam_l      -154.75 -250. 2953.95 0.0 15. 0.0 4.8
-RCC Cam_r      -154.75 -250. 2984.45 0.0 15. 0.0 4.8
-RPP Shield     -193.2 -61.2 -297. -132. 2522. 2588.
+RPP Cam_out    -190.3 -109. -397. -292.9 2548. 2680.
+RPP Cam_top1   -148.75 -138.55 -292.9 -270.6 2607.95 2653.7
+RPP Cam_top2   -158.87 -138.55 -292.9 -270.6 2597.8 2607.95
+RPP Cam_top3   -169.07 -148.75 -292.9 -270.6 2650.45 2660.61
+RPP Cam_in     -170. -129.3 -394.6 -315.8 2588.5 2669.9
+RPP Cam_s1     -170. -109. -318.3 -315.8 2568.2 2680.
+RPP Cam_s2     -170. -154.75 -318.3 -315.8 2607.95 2619.95
+RPP Cam_s3     -170. -154.75 -318.3 -315.8 2638.45 2650.45
+RPP Cam_s5     -170. -160.75 -318.3 -315.8 2639.45 2649.45
+RPP Cam_s4     -170. -160.75 -318.3 -315.8 2608.95 2618.95
+RPP Cam_p1     -170. -139.5 -394.6 -328.4 2598.7 2659.7
+RPP Cam_a1     -170. -129.3 -397. -394.6 2588.5 2669.9
+RPP Cam_a2     -168.8 -140.7 -394.6 -329.6 2599.9 2658.5
+RPP Cam_d      -154.8 -154.7 -394.6 -329.6 2599.9 2658.5
+RPP Cam_p2     -168.7 -163.8 -394.6 -329.7 2599.9 2658.5
+RPP Cam_p3     -163.8 -140.7 -394.6 -329.7 2600. 2605.
+RCC Cam_a3i    -154.75 -329.6 2613.95 0.0 200. 0.0 4.8
+RCC Cam_a3o    -154.75 -329.6 2613.95 0.0 200. 0.0 6.
+RCC Cam_a4i    -154.75 -329.6 2644.45 0.0 200. 0.0 4.8
+RCC Cam_a4o    -154.75 -329.6 2644.45 0.0 200. 0.0 6.
+RCC Cam_l      -154.75 -350. 2613.95 0.0 15. 0.0 4.8
+RCC Cam_r      -154.75 -350. 2644.45 0.0 15. 0.0 4.8
+RPP Shield     -180. -80. -397.0 -264.92 2210. 2340.
+PLA Sh_p1      0.0506 0.0 -0.9987 -134.97 0.0 2325.38
+PLA Sh_p2      -0.0506 0.0 0.9987 -131.63 0.0 2259.42
+PLA Sh_p3      -0.9987 0.0 -0.0506 -100.32 0.0 2294.07
+PLA Sh_p4      0.9987 0.0 0.0506 -166.28 0.0 2290.73
 END
 * Black hole
 BLKBODY      5 +BlkBody -Void
@@ -769,7 +773,8 @@ HALLAIR     55 +wall_in -DumpVac -NippleFl -Nipple -IntCha -BeamIn -UpStTrBP -Tr
                -BP24bUFl -BP24b -BP24bDFl -BP24c -BP24cUFl -BP24cDFl -BP24d -BP24dDFl -BP24dUFl -Be24i -Be24iDFl
                -Be24iUFl -hmsq1usp -hmsq1lsp -shmsbusp -shmsblsp -shmsbsho -shmsbus1 -shmsbls1 -(+AYSpl2 +CSSpl3
                +YSpl7 -CSSpl4 -YSpl1 -YSpl6) -(+CSSHpl2 +CSSHpl4 -CSSpl3 -CSSHpl1 -CSSHpl3 -BLStart)
-               -Cam_out -Cam_a3o -Cam_a4o -Shield -Cam_top1 -Cam_top2 -Cam_top3
+               -Cam_out -Cam_a3o -Cam_a4o -( +Shield -Sh_p1 -Sh_p2 -Sh_p3 -Sh_p4)
+               -Cam_top1 -Cam_top2 -Cam_top3
                | +Cam_a3i
                | +Cam_a4i
                | +Cam_s2 -Cam_s4 -Cam_a3o
@@ -816,7 +821,7 @@ CAMERA       5 +Cam_l
                | +Cam_r
 CAMAIR       5 +Cam_a2 -Cam_p2 -Cam_p3 -Cam_l -Cam_r -Cam_d
 CAMD         5 +Cam_d -Cam_r -Cam_l -Cam_p3
-BOX_C        5 +Shield
+BOX_C        5 +Shield -Sh_p1 -Sh_p2 -Sh_p3 -Sh_p4
 * Liquid Helium for the coils
 HELIUM      25 +YSpl9 +CSSO3i1 +CCpl2i -YSpl8 -CSSO4i1 -CCpl1i -(+CSSH2i3 +CSSH4i3 +CSSO3i1 -CSSH1i3 -CSSH3i3
                -CSSO4i1)
@@ -1043,20 +1048,22 @@ ASSIGNMA      VACUUM   VACCHAN
 ASSIGNMA    PORTLAND      WALL
 LAM-BIAS                  0.02              PHOTON    PHOTON
 BIASING          0.0              10000.    CAMAIR    CAMERA
-USRBIN           10.  SI1MEVNE      -27.      200.      100.     3100.1MeVHall
-USRBIN         -200.     -300.       0.0       40.       40.      124. &
-USRBIN           10.  SI1MEVNE      -28.     -100.     -200.     3050.1MeVCam
-USRBIN         -200.     -300.     2850.       25.       25.       50. &
-USRBIN           10.  SI1MEVNE      -28.     -110.     -100.     3050.1MeVCam2
-USRBIN         -190.     -300.     2850.       10.       25.       25. &
-USRBIN           10.  SI1MEVNE      -28.    -140.7    -229.6    2998.51MeVCam1
-USRBIN        -168.8    -294.6    2939.9        4.        4.        4. &
-USRBIN           10.      DOSE      -28.     -100.     -200.     3050.DoseCam
-USRBIN         -200.     -300.     2850.       25.       25.       50. &
-USRBIN           10.      DOSE      -28.     -110.     -100.     3050.DoseCam2
-USRBIN         -190.     -300.     2850.       10.       25.       25. &
-USRBIN           10.      DOSE      -28.    -140.7    -229.6    2998.5DoseCam1
-USRBIN        -168.8    -294.6    2939.9        4.        4.        4. &
+USRBIN           10.  SI1MEVNE      -27.       0.0       0.0     2800.1MeVHall
+USRBIN         -200.     -400.       0.0       20.       40.      280. &
+USRBIN           10.      DOSE      -27.       0.0       0.0     2800.DoseHall
+USRBIN         -200.     -400.       0.0       20.       40.      280. &
+USRBIN           10.  SI1MEVNE      -28.     -100.     -240.     2700.1MeVCam
+USRBIN         -200.     -400.     2500.       25.       40.       50. &
+USRBIN           10.  SI1MEVNE      -28.     -110.     -200.     2700.1MeVCam2
+USRBIN         -190.     -400.     2500.       10.       25.       25. &
+USRBIN           10.  SI1MEVNE      -28.    -140.7    -329.6    2658.51MeVCam1
+USRBIN        -168.8    -394.6    2599.9       10.       10.       10. &
+USRBIN           10.      DOSE      -28.     -100.     -240.     2700.DoseCam
+USRBIN         -200.     -400.     2500.       25.       40.       50. &
+USRBIN           10.      DOSE      -28.     -110.     -200.     2700.DoseCam2
+USRBIN         -190.     -400.     2500.       10.       25.       25. &
+USRBIN           10.      DOSE      -28.    -140.7    -329.6    2658.5DoseCam1
+USRBIN        -168.8    -394.6    2599.9       10.       10.       10. &
 USRBDX            1.   NEUTRON      -29.   HALLAIR    CAMBOX          OutflowN
 USRBDX         0.100               1000.                            1. &
 USRBDX            1.    PHOTON      -29.   HALLAIR    CAMBOX          OutflowP

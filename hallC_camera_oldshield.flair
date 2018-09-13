@@ -2,7 +2,7 @@
 # FLUKA Project file
 Version: 2
 Title: Hall C activation
-Input: hallC_camera_oldshield.inp
+Input: hallC_camera_oldshield_new.inp
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
 Page: Flair
@@ -20,7 +20,7 @@ Run: <default>
 	StartRun: 0
 	Family:  hallC_camera_oldshield_aa hallC_camera_oldshield_ab hallC_camera_oldshield_ac hallC_camera_oldshield_ad hallC_camera_oldshield_ae hallC_camera_oldshield_af hallC_camera_oldshield_ag hallC_camera_oldshield_ah hallC_camera_oldshield_ai hallC_camera_oldshield_aj
 
-	# USRxxx data file: hallC_camera_oldshield_27.bnn
+	# USRxxx data file: hallC_camera_oldshield_new_27.bnn
 	Data: \I_\U.\e
 		Unit: 27
 		Type: b
@@ -28,7 +28,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: hallC_camera_oldshield_28.bnn
+	# USRxxx data file: hallC_camera_oldshield_new_28.bnn
 	Data: \I_\U.\e
 		Unit: 28
 		Type: b
@@ -36,7 +36,7 @@ Run: <default>
 		Rule: +,\I\d\d\d_ftn\.\U
 	End
 
-	# USRxxx data file: hallC_camera_oldshield_29.bnx
+	# USRxxx data file: hallC_camera_oldshield_new_29.bnx
 	Data: \I_\U.\e
 		Unit: 29
 		Type: x
@@ -186,16 +186,6 @@ Material: AL6061T6
 End
 
 # Material
-Material: HLOWDENS
-	alpha: 0
-	color: #70D0B0
-	fuzz: 0.0
-	ior: 1.0
-	shine: 10.0
-	specular: 0.0
-End
-
-# Material
 Material: SS347
 	alpha: 0
 	color: #409030
@@ -256,6 +246,16 @@ Material: POTASSIU
 End
 
 # Material
+Material: HLOWDENS
+	alpha: 0
+	color: #70D0B0
+	fuzz: 0.0
+	ior: 1.0
+	shine: 10.0
+	specular: 0.0
+End
+
+# Material
 Material: LQHELIUM
 	alpha: 0
 	color: #A05070
@@ -286,9 +286,9 @@ Material: ZINC
 End
 
 # Material
-Material: SS316LN
+Material: Stainles
 	alpha: 0
-	color: #401010
+	color: #40D0D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -296,9 +296,9 @@ Material: SS316LN
 End
 
 # Material
-Material: Stainles
+Material: SS316LN
 	alpha: 0
-	color: #40D0D0
+	color: #401010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -337,9 +337,9 @@ End
 
 # Geometry Information
 Geometry:
-	Frame.bsplit: 0.99
-	Frame.tsplit: 0.5
-	Frame.vsplit: 0.01
+	Frame.bsplit: 0.5
+	Frame.tsplit: 0.01
+	Frame.vsplit: 0.99
 
 	# Layer
 	Layer: 3D
@@ -351,25 +351,18 @@ Geometry:
 		Options.viewport: 0
 		Palette: True
 		Palette._visible: True
-		Palette.alphamax: 0
-		Palette.alphamin: 0
 		Palette.cpd: 10
-		Palette.inv: 0
-		Palette.log: 1
-		Palette.max: 10000000.0
+		Palette.max: 100000000.0
 		Palette.min: 10.0
 		Palette.n: 60
-		Palette.palette: FLUKA
-		Palette.smooth: 0
 		Show: 0
 		Show.lattice: 1
 		Show.voxel: 1
 		Usrbin: True
 		Usrbin._visible: True
-		Usrbin.det: 3
-		Usrbin.file: Farm/Oldshield/Oldshield_28.dat
-		Usrbin.norm: 1.3e+17
-		Usrbin.palette: Palette
+		Usrbin.det: 2
+		Usrbin.file: Farm/Oldshield_update/data_oldshield_27.dat
+		Usrbin.norm: 3.6e17
 		deflights: 1
 		layer: 3D
 	End
@@ -379,8 +372,8 @@ End
 Plot: Red
 	Format: .eps
 	Type:   Geometry
-	basisu: -0.975054 0 0.221966
-	basisv: 0.0149184 0.997739 0.0655337
+	basisu: -0.97342 -4.46895e-18 0.229027
+	basisv: 0.0153929 0.997739 0.0654238
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
@@ -389,12 +382,12 @@ Plot: Red
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 248.832 0.22377
+	extends: 515.978 62020.6
 	grid: 0
 	index: 0
 	labels: 1
 	layer: 3D
-	origin: -785.041 6.84288 137.891
+	origin: -214.743 12334.9 857.838
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -411,22 +404,22 @@ End
 Plot: Green
 	Format: .eps
 	Type:   Geometry
-	basisu: 0 0 1
-	basisv: 1 0 0
+	basisu: -1 0 0
+	basisv: 0 0 1
 	boundaries: 1
 	cbcolors: 0
 	cblog: 0
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: Z-X
+	coord: X-Z
 	cpd: 0
-	extends: 2662.33 1418.63
+	extends: 358.318 362.235
 	grid: 0
 	index: 0
 	labels: 1
-	layer: Media
-	origin: -857.807 -228 1524.25
+	layer: 3D
+	origin: 37.6335 100 2430.92
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -447,10 +440,10 @@ Plot: Blue
 	basisv: 0 1 0
 	boundaries: 1
 	coord: Z-Y
-	extends: 144 76.6619
+	extends: 120 77.0393
 	labels: 1
 	layer: Media
-	origin: -154.75 -248.168 2986.14
+	origin: -154.75 -336.85 2590.92
 	subtype: Material
 	title: GeoViewer Blue plot
 End
@@ -459,14 +452,14 @@ End
 Plot: Magenta
 	Format: .eps
 	Type:   Geometry
-	basisu: -1 0 0
+	basisu: 1 0 0
 	basisv: 0 1 0
 	boundaries: 1
 	coord: X-Y
-	extends: 57.8704 1712.96
+	extends: 120 77.1559
 	labels: 1
 	layer: Media
-	origin: -167.378 -259.607 2953.95
+	origin: -143.742 -342.55 2613.95
 	subtype: Material
 	title: GeoViewer Magenta plot
 End
@@ -569,8 +562,8 @@ Plot: oldshield_28_plot03
 	Format: .eps
 	Type:   USRBIN
 	axes: Auto
-	bxmax: -140.7
-	bxmin: -168.8
+	bxmax: -140.
+	bxmin: -168.
 	cbcolors: 30
 	cblog: 1
 	cbmax: 5e13
@@ -579,18 +572,18 @@ Plot: oldshield_28_plot03
 	cbround: 0
 	cbtics: 1
 	cpd: 0
-	datafile: Farm/Oldshield/Oldshield_28.dat
-	det: 2
+	datafile: Farm/Oldshield_update/data_oldshield_28.dat
+	det: 1
 	errors: 0
 	geo: -Auto-
 	grid: 0
 	hist: 2D Projection
 	index: 1
-	int: 1.55275197E-06
+	int: 0.00028126781
 	lw.0: 0
-	max: 2.38725185E-11
-	min: 7.81631097E-12
-	norm: 8.1e21
+	max: 5.88873339E-10
+	min: 3.09158146E-12
+	norm: 2.2e22
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -636,6 +629,199 @@ Plot: oldshield_28_plot05
 	lw.0: 0
 	max: 2.60327614E-14
 	min: 6.94979522E-15
+	norm: 1.3e+17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Old Shield Dose (RAD)
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: Z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: Y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Old Shield Dose (RAD)"
+Plot: oldshield_28_plot06
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -144
+	bxmin: -168.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1e6
+	cbmin: 10
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Oldshield/Oldshield_28.dat
+	det: 3
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 2
+	int: 3.78593005E-06
+	lw.0: 0
+	max: 2.27931389E-11
+	min: 8.08717041E-16
+	norm: 1.3e+17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Old Shield Dose (RAD)
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: Z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: Y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Accumulated 1MeVeq neutron Old Shielding"
+Plot: oldshield_28_plot04
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -142
+	bxmin: -166.
+	bzmin: 2866.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 5e13
+	cbmin: 5e8
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Update/OldShield/old_data_28.dat
+	det: 2
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 1
+	int: 0.00032532114
+	lw.0: 0
+	max: 7.11334935E-10
+	min: 4.02734053E-12
+	norm: 2.2e22
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Accumulated 1MeVeq neutron Old Shielding
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: Z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: Y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Old Shield Dose (RAD)"
+Plot: oldshield_28_plot08
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -140
+	bxmin: -168.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1e8
+	cbmin: 10
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Oldshield_update/data_oldshield_28.dat
+	det: 4
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 2
+	int: 9.13659325E-06
+	lw.0: 0
+	max: 1.91297794E-11
+	min: 5.19751222E-16
+	norm: 3.6e+17
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Old Shield Dose (RAD)
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlabel: Z(cm)
+	xlog: 0
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylabel: Y(cm)
+	ylog: 0
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Old Shield Dose (RAD)"
+Plot: oldshield_28_plot07
+	Format: .eps
+	Type:   USRBIN
+	axes: Auto
+	bxmax: -144
+	bxmin: -168.
+	cbcolors: 30
+	cblog: 1
+	cbmax: 1e6
+	cbmin: 10
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	cpd: 0
+	datafile: Farm/Oldshield/Oldshield_28.dat
+	det: 3
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 2
+	int: 3.78593005E-06
+	lw.0: 0
+	max: 2.27931389E-11
+	min: 8.08717041E-16
 	norm: 1.3e+17
 	proj: X
 	ps.0: 0
